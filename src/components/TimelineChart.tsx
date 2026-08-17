@@ -71,7 +71,7 @@ export function TimelineChart({ events }: TimelineChartProps) {
 
   return (
     <ResponsiveContainer width="100%" height={220}>
-      <AreaChart data={data} margin={{ top: 8, right: 12, left: -12, bottom: 0 }}>
+      <AreaChart data={data} margin={{ top: 8, right: 12, left: 0, bottom: 0 }}>
         <defs>
           <linearGradient id="requestsGradient" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0%" stopColor="#22d3ee" stopOpacity={0.35} />
@@ -90,7 +90,13 @@ export function TimelineChart({ events }: TimelineChartProps) {
           axisLine={{ stroke: "#1f2937" }}
           tickLine={false}
         />
-        <YAxis tick={{ fill: "#8b98a5", fontSize: 11 }} axisLine={false} tickLine={false} width={32} />
+        <YAxis
+          tick={{ fill: "#c4ccd4", fontSize: 12, fontWeight: 500 }}
+          axisLine={false}
+          tickLine={false}
+          width={46}
+          allowDecimals={false}
+        />
         <Tooltip
           contentStyle={{
             background: "#10151f",
